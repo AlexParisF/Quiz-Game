@@ -1,0 +1,36 @@
+{"questions_list": [
+    {
+      "title": "Qué Sistema Operativo utiliza samsung para algunos de sus dispositivos \"wearables\"?",
+      "answers": [
+        {"answer":"MacOS","isRight": false},
+        {"answer":"Windows","isRight": false},
+        {"answer":"Tizen","isRight": true},
+        {"answer":"Linux","isRight": false}
+      ]
+    },
+    {
+      "title": "¿Cuál es la última versión disponible del sistema operativo Android?",
+      "answers": [
+        {"answer":"10","isRight": false},{"answer":"14","isRight": true}, {"answer":"13","isRight": false},{"answer":"12","isRight": false}
+      ]
+    },
+    {
+      "title": "Una aplicación web es...",
+      "answers": [
+        {"answer":"un sitio web específicamente optimizado para un dispositivo móvil","isRight": true},
+        {"answer":"una aplicación instalada en el dispositivo móvil con acceso al hardware","isRight": false},
+        {"answer":"No se utiliza para nada en comunicaciones","isRight": false},
+        {"answer":"La transmisión de datos a través de Ethernet","isRight": false}
+      ]
+    },
+    {
+      "title": "Una aplicación híbrida es ....",
+      "answers": [
+        {"answer":"una aplicación web ejecutada en un dispositivo móvil","isRight": false},
+        {"answer":"una aplicación nativa ejecutada en un entorno virtual","isRight": false},
+        {"answer":"Una aplicación que combina lo mejor de las aplicaciones nativas y webs","isRight": true},
+        {"answer":"Todas las anteriores son correctas","isRight": false}
+      ]
+    }
+  ]
+}

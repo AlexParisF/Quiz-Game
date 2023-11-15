@@ -1,0 +1,36 @@
+{"questions_list": [
+    {
+      "title": "la Open Handset Alliance se crea en ...",
+      "answers": [
+        {"answer":"2005","isRight": false},
+        {"answer":"2006","isRight": false},
+        {"answer":"2007","isRight": true},
+        {"answer":"2008","isRight": false}
+      ]
+    },
+    {
+      "title": "¿Qué lenguajes de programación se pueden utilizar con Android?",
+      "answers": [
+        {"answer":"Java","isRight": false},{"answer":"Kotlin","isRight": false}, {"answer":"C++","isRight": false},{"answer":"Todos los anteriores","isRight": true}
+      ]
+    },
+    {
+      "title": "¿Cuales de los siguientes, no es un componente de Android?",
+      "answers": [
+        {"answer":"Actividades","isRight": false},
+        {"answer":"Servicios","isRight": false},
+        {"answer":"Escenas","isRight": true},
+        {"answer":"Receptores de broadcast","isRight": false}
+      ]
+    },
+    {
+      "title": "En qué estado del ciclo de vida de una actividad se llama al método onStart()",
+      "answers": [
+        {"answer":"en el estado created","isRight": true},
+        {"answer":"en el estado resumed","isRight": false},
+        {"answer":"en el estado started","isRight": false},
+        {"answer":"Ninguna de las anteriores", "isRight": false}
+      ]
+    }
+  ]
+}

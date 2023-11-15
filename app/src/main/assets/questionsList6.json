@@ -1,0 +1,36 @@
+{"questions_list": [
+    {
+      "title": "En comunicaciones, cual es un ejemplo del servicio de integridad...",
+      "answers": [
+        {"answer":"que nadie pueda captar nuestra llamada y enterarse de lo que decimos","isRight": false},
+        {"answer":"que solo los usuarios con un teléfono de la red, es decir, pertenecientes a la compañía, pueden utilizar la red","isRight": false},
+        {"answer":"que la información, de voz o datos, que viaje por la red inalámbrica no se pueda alterar sin que se detecte","isRight": true},
+        {"answer":"debe ser imposible que un usuario que ha utilizado la red pueda negarlo","isRight": false}
+      ]
+    },
+    {
+      "title": "¿Cuál es el motivo de que los dispositivos móviles hayan vivido una importante revolución en cuanto a las aplicaciones que pueden ejecutar",
+      "answers": [
+        {"answer":"Un hardware potente, con muchos sensores","isRight": false},{"answer":"Un sistema operativo complejo que facilita un SDK sencillo y potente para los desarrolladores.","isRight": false}, {"answer":"Un mercado de aplicaciones completamente integrado en el sistema y muy intuitivo","isRight": false},{"answer":"Todas las anteriores","isRight": true}
+      ]
+    },
+    {
+      "title": " ¿Cuál de las siguientes afirmaciones describe mejor el masquerading en el contexto de la seguridad informática?",
+      "answers": [
+        {"answer":"El masquerading es una técnica utilizada para ocultar completamente la existencia de un ataque en un sistema","isRight": false},
+        {"answer":"El masquerading implica que el atacante suplanta la identidad de alguna entidad del sistema para obtener acceso no autorizado","isRight": true},
+        {"answer":"El masquerading se utiliza para cifrar la comunicación entre dos partes para evitar que los atacantes intercepten los datos.","isRight": false},
+        {"answer":"El masquerading es una técnica que utiliza la ingeniería social para persuadir a los usuarios a revelar sus contraseñas","isRight": false}
+      ]
+    },
+    {
+      "title": "¿Cuál de las siguientes afirmaciones describe mejor la \"Denegación de Servicio\" (DoS) en el contexto de la seguridad informática?",
+      "answers": [
+        {"answer":"DoS es un ataque en el que un atacante obtiene acceso no autorizado a un sistema y roba datos confidenciales","isRight": false},
+        {"answer":"DoS es un ataque en el que un atacante sobrecarga un sistema o recurso con tráfico malicioso para hacer que deje de funcionar o responda lentamente.","isRight": true},
+        {"answer":"DoS es un ataque en el que un atacante modifica el código fuente de una aplicación para agregar funcionalidades no deseadas.","isRight": false},
+        {"answer":"DoS es un ataque en el que un atacante intercepta la comunicación entre dos partes para obtener información confidencial.","isRight": false}
+      ]
+    }
+  ]
+}

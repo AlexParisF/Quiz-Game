@@ -1,0 +1,37 @@
+{
+  "questions_list": [
+    {
+      "title": "El protocolo de comunicación define...",
+      "answers": [
+        {"answer":"Cómo los nodos de comunicación están interconectados entre sí.","isRight": false},
+        {"answer":"El lenguaje y el conjunto de reglas que facilitan la comunicación entre el emisor y el receptor","isRight": true},
+        {"answer":"El elemento que permite garantizar la confidencialidad, la autenticación y la integridad de los datos","isRight": false},
+        {"answer":"El medio de transmisión de las comunicaciones inalámbricas ","isRight": false}
+      ]
+    },
+    {
+      "title": "Qué rango de frecuencias no está entre los más utilizados en las comunicaciones inalámbricas",
+      "answers": [
+        {"answer":"Infrarrojos","isRight": false},{"answer":"Microondas","isRight": false}, {"answer":"Radiofrecuencias","isRight": false},{"answer":"Rayos Gamma","isRight": true}
+      ]
+    },
+    {
+      "title": "La tecnología near field comnunication (NFC) se utiliza para...",
+      "answers": [
+        {"answer":"La transmisión de datos de una manera simple entre diferentes dispositivos mediante un enlace de radiofrecuencia en la banda ISM de 13,56 MHz.","isRight": true},
+        {"answer":"La transmisión de datos a través de cable coaxial","isRight": false},
+        {"answer":"No se utiliza para nada en comunicaciones","isRight": false},
+        {"answer":"La transmisión de datos a través de Ethernet","isRight": false}
+      ]
+    },
+    {
+      "title": "El objetivo del 5G es ....",
+      "answers": [
+        {"answer":"dar respuesta al incremento de usuarios por área de cobertura y al incremento de consumo de datos hasta llegar a cantidades de gigabytes por mes","isRight": false},
+        {"answer":" que se generalice el consumo de vídeo en alta definición desde dispositivos móviles","isRight": false},
+        {"answer":"Dar cabida al desarrollo del «internet de las cosas» (IoT), muchos de estos usuarios serán dispositivos que de forma autónoma se estarán conectando a internet","isRight": false},
+        {"answer":"Todas las anteriores son correctas","isRight": true}
+      ]
+    }
+  ]
+}

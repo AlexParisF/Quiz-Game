@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,10 +49,11 @@ public class MyUnitRecyclerViewAdapter extends RecyclerView.Adapter<MyUnitRecycl
 
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                Toast.makeText(context.getApplicationContext(),
-                        "Press unit:" + mValues.get(position).description,
-                        Toast.LENGTH_LONG).show();
-            } });
+                Intent intent = new Intent(v.getContext(), QuestionsActivity.class);
+                intent.putExtra("quiz_number", position);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

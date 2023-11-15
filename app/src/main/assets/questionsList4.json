@@ -1,0 +1,36 @@
+{ "questions_list": [
+    {
+      "title": " ¿Cuál de las siguientes afirmaciones describe mejor el patrón Inversión de Control (IoC) en la programación?",
+      "answers": [
+        {"answer":"IoC es un patrón de diseño que promueve la dependencia fuerte entre clases en una aplicación","isRight": false},
+        {"answer":" IoC implica que un componente no controla directamente la creación o gestión de sus dependencias, sino que delega esta responsabilidad a un contenedor o framework","isRight": true},
+        {"answer":" IoC es principalmente utilizado en la programación orientada a objetos para eliminar por completo la necesidad de la herencia en una jerarquía de clases","isRight": false},
+        {"answer":" IoC se utiliza para evitar el uso de patrones de diseño como Singleton y Factory Method","isRight": false}
+      ]
+    },
+    {
+      "title": "Qué características aprovecha una aplicación de realidad aumentada",
+      "answers": [
+        {"answer":"GPS","isRight": false},{"answer":"Brújula","isRight": false}, {"answer":"Acelerómetro","isRight": false},{"answer":"Todas las anteriores","isRight": true}
+      ]
+    },
+    {
+      "title": "¿Cuál de las siguientes NO es una ventaja de una aplicación web nativa?",
+      "answers": [
+        {"answer":"Todos los puntos a favor de las aplicaciones web móviles","isRight": false},
+        {"answer":"Se pueden considerar, en lo que respecta a la instalación y la distribución, como aplicaciones nativas","isRight": false},
+        {"answer":"La experiencia del usuario es, en ocasiones, contradictoria, pues a pesar de tratarse de una aplicación nativa, requiere de conexión a Internet para poder trabajar y funciona según los tiempos de respuesta del navegador","isRight": true},
+        {"answer":"Niguna de las anteriores","isRight": false}
+      ]
+    },
+    {
+      "title": "¿Cuál de las siguientes NO es una ventaja de una aplicación nativa?",
+      "answers": [
+        {"answer":"Acceso total al contexto, con todas las posibilidades que eso conlleva. Consigue las mejores experiencias de usuario","isRight": false},
+        {"answer":"Posibilidad de gestión de interrupciones en la aplicación o en las capacidades del dispositivo","isRight": false},
+        {"answer":"Son relativamente fáciles de desarrollar si solo se contempla una plataforma","isRight": false},
+        {"answer":"No existe un estándar, por lo que cada plataforma ofrecerá sus peculiaridades","isRight": true}
+      ]
+    }
+  ]
+}

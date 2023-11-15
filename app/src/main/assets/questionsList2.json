@@ -1,0 +1,36 @@
+{"questions_list": [
+    {
+      "title": "Selecciona la característica incorrecta de los dispositivos móviles",
+      "answers": [
+        {"answer":"Son aparatos voluminosos","isRight": true},
+        {"answer":"Tienen conexión permanente o intermitente a una red","isRight": false},
+        {"answer":"Tienen capacidad de procesamiento","isRight": false},
+        {"answer":"Tienen una alta capacidad de interacción mediante pantalla, teclado, vibraciones o sonidos","isRight": false}
+      ]
+    },
+    {
+      "title": "un dispositivo inalámbrico es aquel capaz de comunicarse... ",
+      "answers": [
+        {"answer":"mediante cable de fibra óptica","isRight": false},{"answer":"mediante una red sin cables","isRight": true}, {"answer":"mediante cables ethernet","isRight": false},{"answer":"Ninguna de las anteriores es correcta","isRight": false}
+      ]
+    },
+    {
+      "title": "Qué categoría de dispositivo no es considerado \"móvil\"?",
+      "answers": [
+        {"answer":"smartphone","isRight": false},
+        {"answer":"tablet","isRight": false},
+        {"answer":"Dispositivo vestible (wearable","isRight": false},
+        {"answer":"ordenador portátil","isRight": true}
+      ]
+    },
+    {
+      "title": "De los siguientes tipos de conectores, cual nó se usa en un dispositivo móvil",
+      "answers": [
+        {"answer":"conector ethernet RJ45","isRight": true},
+        {"answer":"conector micro USB","isRight": false},
+        {"answer":"conector lightning","isRight": false},
+        {"answer":"conector tipo C","isRight": false}
+      ]
+    }
+  ]
+}
