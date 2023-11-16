@@ -45,6 +45,9 @@ public class MyQuestionRecyclerViewAdapter extends RecyclerView.Adapter<MyQuesti
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        if(controller.getCurrentQuestion() >= QuizContent.ITEMS.size()){
+            return;
+        }
         QuizContent.Answer answer = QuizContent.ITEMS.get(
                 GameController.getInstance().getCurrentQuestion())
                 .getPossibleAnswers().get(position);
