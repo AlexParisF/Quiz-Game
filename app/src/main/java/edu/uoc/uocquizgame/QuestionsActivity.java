@@ -3,7 +3,9 @@ package edu.uoc.uocquizgame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.ImageView;
@@ -13,7 +15,6 @@ import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
 
 public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
-
     CountDownTimer contador = new CountDownTimer(25000, 1000) {
 
         public void onTick(long millisUntilFinished) {
@@ -24,6 +25,7 @@ public class QuestionsActivity extends AppCompatActivity {
         public void onFinish() {
             controller.setCurrentQuestion(QuizContent.ITEMS.size());
             checkUnitPassed();
+            play(R.raw.gong);
         }
     };
     @Override
@@ -51,7 +53,10 @@ public class QuestionsActivity extends AppCompatActivity {
         progress.setText("Question "+(controller.getCurrentQuestion()+1)+"/"+QuizContent.ITEMS.size()+" - Right Answers: "+controller.getCorrectAnswersInCurrentTest());
         contador.start();
     }
-
+    private void play(int resource){
+        MediaPlayer mp=MediaPlayer.create(getApplicationContext(),resource);
+        mp.start();
+    }
     private void checkUnitPassed(){
         if(controller.getCurrentQuestion()==QuizContent.ITEMS.size() ){
             // Current unit Test over
@@ -65,8 +70,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 contador.cancel();
                 TextView contador = findViewById(R.id.contador);
                 contador.setText("FINISHED! WELL DONE!");
-                //SONIDOS
-            }
+                play(R.raw.cheer);            }
             else {
                 // all questions are not  right
                 controller.changeUnitState(GameController.UnitType.FAILED, controller.getCurrentUnit());
@@ -75,8 +79,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 contador.cancel();
                 TextView contador = findViewById(R.id.contador);
                 contador.setText("FINISHED! TEST FAILED!");
-                //SONIDOS
-
+                play(R.raw.fail);
             }
         }
         else {
