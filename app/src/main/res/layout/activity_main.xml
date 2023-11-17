@@ -12,7 +12,7 @@
         android:layout_height="54dp"
         android:layout_marginTop="16dp"
         android:text="UOC TDDM Quiz Game"
-        android:textColor="#0055FF"
+        android:textColor="#0C3993"
         android:textSize="34sp"
         android:textStyle="italic|bold"
         app:layout_constraintEnd_toEndOf="parent"

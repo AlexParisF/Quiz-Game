@@ -2,7 +2,6 @@ package edu.uoc.uocquizgame;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,14 +18,13 @@ import java.util.List;
  * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MyQuestionRecyclerViewAdapter extends RecyclerView.Adapter<MyQuestionRecyclerViewAdapter.ViewHolder> {
+public class MyQuestionFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MyQuestionFragmentRecyclerViewAdapter.ViewHolder> {
 
     private final List<Question> mValues;
     private GameController controller;
     private GameController.GameControllerQuestionObserver observer;
 
-
-    public MyQuestionRecyclerViewAdapter(List<Question> items) {
+    public MyQuestionFragmentRecyclerViewAdapter(List<Question> items) {
         mValues = items;
         controller=GameController.getInstance();
         observer=new GameController.GameControllerQuestionObserver() {

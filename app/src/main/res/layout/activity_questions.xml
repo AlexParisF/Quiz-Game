@@ -10,8 +10,11 @@
         android:id="@+id/contador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="contador"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="unitTest"
+        android:textColor="#0C3993"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/imageUnit"
         app:layout_constraintTop_toTopOf="@+id/imageUnit" />

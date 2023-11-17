@@ -12,8 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
-
 /**
  * A fragment representing a list of Items.
  */
@@ -64,7 +62,7 @@ public class QuestionFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyQuestionRecyclerViewAdapter(QuizContent.ITEMS));
+            recyclerView.setAdapter(new MyQuestionFragmentRecyclerViewAdapter(QuizContent.ITEMS));
         }
         return view;
     }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +14,19 @@ import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
 public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
     GameController.GameControllerQuestionObserver observer;
+
+    CountDownTimer contador = new CountDownTimer(25000, 1000) {
+
+        public void onTick(long millisUntilFinished) {
+            TextView contador = findViewById(R.id.contador);
+            contador.setText(millisUntilFinished / 1000 + " seconds left");
+        }
+
+        public void onFinish() {
+            controller.setCurrentQuestion(QuizContent.ITEMS.size());
+            checkUnitPassed();
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +50,7 @@ public class QuestionsActivity extends AppCompatActivity {
         question.setText(QuizContent.ITEMS.get(controller.getCurrentQuestion()).getTitle());
         TextView progress = findViewById(R.id.progress);
         progress.setText("Question "+(controller.getCurrentQuestion()+1)+"/"+QuizContent.ITEMS.size()+" - Right Answers: "+controller.getCorrectAnswersInCurrentTest());
+        contador.start();
     }
 
     private void checkUnitPassed(){
@@ -48,16 +63,20 @@ public class QuestionsActivity extends AppCompatActivity {
                 progress.setText("END OF TEST: Total Right Answers: "+controller.getCorrectAnswersInCurrentTest()+" - TEST PASSED!");
                 controller.updateLevel();
                 controller.updateScore(10);
+                contador.cancel();
+                TextView contador = findViewById(R.id.contador);
+                contador.setText("FINISHED! WELL DONE!");
                 //SONIDOS
-                //CONTADOR
             }
             else {
                 // all questions are not  right
                 controller.changeUnitState(GameController.UnitType.FAILED, controller.getCurrentUnit());
                 TextView progress = findViewById(R.id.progress);
                 progress.setText("END OF TEST: Total Right Answers: "+controller.getCorrectAnswersInCurrentTest()+" - TEST FAILED!");
+                contador.cancel();
+                TextView contador = findViewById(R.id.contador);
+                contador.setText("FINISHED! TEST FAILED!");
                 //SONIDOS
-                //CONTADOR
 
             }
         }
