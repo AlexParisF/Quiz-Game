@@ -30,7 +30,8 @@ public class MyQuestionFragmentRecyclerViewAdapter extends RecyclerView.Adapter<
         observer=new GameController.GameControllerQuestionObserver() {
             @Override public void onQuestionChanged() {
                 notifyDataSetChanged();
-            } };
+            }
+        };
         controller.addQuestionObserver(observer);
     }
 

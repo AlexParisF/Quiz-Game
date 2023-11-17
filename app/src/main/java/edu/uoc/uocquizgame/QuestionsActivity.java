@@ -13,7 +13,6 @@ import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
 
 public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
-    GameController.GameControllerQuestionObserver observer;
 
     CountDownTimer contador = new CountDownTimer(25000, 1000) {
 
@@ -35,7 +34,7 @@ public class QuestionsActivity extends AppCompatActivity {
         QuizContent.loadQuestionsFromJSON(this,quizNumber);
         controller.initTest();
         setContentView(R.layout.activity_questions);
-        observer=new GameController.GameControllerQuestionObserver() {
+        GameController.GameControllerQuestionObserver observer=new GameController.GameControllerQuestionObserver() {
             @Override public void onQuestionChanged() {
                 checkUnitPassed();
             }

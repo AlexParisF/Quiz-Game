@@ -6,14 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import edu.uoc.uocquizgame.placeholder.PlaceholderContent.PlaceholderItem;
 import edu.uoc.uocquizgame.databinding.FragmentUnitBinding;
@@ -28,10 +26,19 @@ public class MyUnitRecyclerViewAdapter extends RecyclerView.Adapter<MyUnitRecycl
 
     private final List<PlaceholderItem> mValues;
     private Context context;
+    GameController controller;
+
 
     public MyUnitRecyclerViewAdapter(List<PlaceholderItem> items, Context context) {
         mValues = items;
         this.context = context;
+        controller = GameController.getInstance();
+        GameController.GameControllerUnitObserver observer=new GameController.GameControllerUnitObserver() {
+            @Override public void onQuizStateChanged() {
+                notifyDataSetChanged();
+            }
+        };
+        controller.addUnitObserver(observer);
     }
 
     @Override
@@ -54,6 +61,19 @@ public class MyUnitRecyclerViewAdapter extends RecyclerView.Adapter<MyUnitRecycl
                 v.getContext().startActivity(intent);
             }
         });
+        holder.mCardView.setCardBackgroundColor(Color.WHITE);
+        switch(controller.unitsPassed[position]){
+            case PASSED:
+                holder.mCardView.setCardBackgroundColor(Color.GREEN);
+                break;
+            case FAILED:
+                holder.mCardView.setCardBackgroundColor(Color.RED);
+                break;
+            default:
+                holder.mCardView.setCardBackgroundColor(Color.WHITE);
+                break;
+        }
+
     }
 
     @Override
