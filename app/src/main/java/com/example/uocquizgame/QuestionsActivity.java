@@ -55,6 +55,11 @@ public class QuestionsActivity extends AppCompatActivity {
         progress.setText("Question "+(controller.getCurrentQuestion()+1)+"/"+QuizContent.ITEMS.size()+" - Right Answers: "+controller.getCorrectAnswersInCurrentTest());
         countDownTimer.start();
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        controller.removeQuestionObserver(observer);
+    }
     private void play(int resource){
         MediaPlayer mp=MediaPlayer.create(getApplicationContext(),resource);
         mp.start();
