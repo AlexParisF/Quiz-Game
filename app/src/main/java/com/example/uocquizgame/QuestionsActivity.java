@@ -15,7 +15,7 @@ public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
     GameController.GameControllerQuestionObserver observer;
 
-    boolean on_finish = false;
+    static boolean on_finish = false;
     CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
 
         public void onTick(long millisUntilFinished) {
@@ -83,7 +83,6 @@ public class QuestionsActivity extends AppCompatActivity {
                 countDownTimer.cancel();
                 if (on_finish) {
                     play(R.raw.gong);
-                    on_finish = false;
                 }
                 else {
                     play(R.raw.fail);

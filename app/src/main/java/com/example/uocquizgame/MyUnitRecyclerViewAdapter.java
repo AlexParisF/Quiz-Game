@@ -58,6 +58,7 @@ public class MyUnitRecyclerViewAdapter extends RecyclerView.Adapter<MyUnitRecycl
             @Override public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), QuestionsActivity.class);
                 intent.putExtra("quiz_number", position);
+                QuestionsActivity.on_finish = false;
                 v.getContext().startActivity(intent);
             }
         });
