@@ -1,9 +1,8 @@
-package edu.uoc.uocquizgame;
+package com.example.uocquizgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class QuizActivity extends AppCompatActivity {

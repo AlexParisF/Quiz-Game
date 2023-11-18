@@ -1,4 +1,4 @@
-package edu.uoc.uocquizgame;
+package com.example.uocquizgame;
 
 import org.junit.Test;
 

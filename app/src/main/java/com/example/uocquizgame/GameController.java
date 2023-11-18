@@ -1,6 +1,4 @@
-package edu.uoc.uocquizgame;
-
-import android.util.Log;
+package com.example.uocquizgame;
 
 import java.util.ArrayList;
 

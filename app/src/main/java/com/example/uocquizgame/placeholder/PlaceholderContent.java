@@ -1,6 +1,6 @@
-package edu.uoc.uocquizgame.placeholder;
+package com.example.uocquizgame.placeholder;
 
-import edu.uoc.uocquizgame.R;
+import com.example.uocquizgame.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "edu.uoc.uocquizgame"
+    namespace = "com.example.uocquizgame"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "edu.uoc.uocquizgame"
+        applicationId = "com.example.uocquizgame"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

@@ -1,4 +1,4 @@
-package edu.uoc.uocquizgame;
+package com.example.uocquizgame;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import edu.uoc.uocquizgame.placeholder.PlaceholderContent.PlaceholderItem;
-import edu.uoc.uocquizgame.databinding.FragmentUnitBinding;
+import com.example.uocquizgame.placeholder.PlaceholderContent.PlaceholderItem;
+import com.example.uocquizgame.databinding.FragmentUnitBinding;
 
 import java.util.List;
 

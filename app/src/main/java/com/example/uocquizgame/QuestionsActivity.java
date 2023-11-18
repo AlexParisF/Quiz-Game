@@ -1,9 +1,7 @@
-package edu.uoc.uocquizgame;
+package com.example.uocquizgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -11,14 +9,14 @@ import android.os.CountDownTimer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
+import com.example.uocquizgame.placeholder.PlaceholderContent;
 
 public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
     GameController.GameControllerQuestionObserver observer;
 
     boolean on_finish = false;
-    CountDownTimer contador = new CountDownTimer(60000, 1000) {
+    CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
 
         public void onTick(long millisUntilFinished) {
             TextView contador = findViewById(R.id.contador);
@@ -55,7 +53,7 @@ public class QuestionsActivity extends AppCompatActivity {
         question.setText(QuizContent.ITEMS.get(controller.getCurrentQuestion()).getTitle());
         TextView progress = findViewById(R.id.progress);
         progress.setText("Question "+(controller.getCurrentQuestion()+1)+"/"+QuizContent.ITEMS.size()+" - Right Answers: "+controller.getCorrectAnswersInCurrentTest());
-        contador.start();
+        countDownTimer.start();
     }
     private void play(int resource){
         MediaPlayer mp=MediaPlayer.create(getApplicationContext(),resource);
@@ -71,7 +69,7 @@ public class QuestionsActivity extends AppCompatActivity {
                 progress.setText("END OF TEST: Total Right Answers: "+controller.getCorrectAnswersInCurrentTest()+" - TEST PASSED!");
                 controller.updateLevel();
                 controller.updateScore(10);
-                contador.cancel();
+                countDownTimer.cancel();
                 TextView contador = findViewById(R.id.contador);
                 contador.setText("FINISHED! WELL DONE!");
                 play(R.raw.cheer);            }
@@ -80,13 +78,16 @@ public class QuestionsActivity extends AppCompatActivity {
                 controller.changeUnitState(GameController.UnitType.FAILED, controller.getCurrentUnit());
                 TextView progress = findViewById(R.id.progress);
                 progress.setText("END OF TEST: Total Right Answers: " + controller.getCorrectAnswersInCurrentTest() + " - TEST FAILED!");
-                contador.cancel();
                 TextView contador = findViewById(R.id.contador);
                 contador.setText("FINISHED! TEST FAILED!");
-                if (!on_finish) {
+                countDownTimer.cancel();
+                if (on_finish) {
+                    play(R.raw.gong);
+                    on_finish = false;
+                }
+                else {
                     play(R.raw.fail);
                 }
-                else play(R.raw.gong);
             }
         }
 

@@ -50,7 +50,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
-        android:name="edu.uoc.uocquizgame.QuestionFragment"
+        android:name="com.example.uocquizgame.QuestionFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/progress"
