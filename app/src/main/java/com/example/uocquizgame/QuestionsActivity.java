@@ -16,7 +16,7 @@ public class QuestionsActivity extends AppCompatActivity {
     GameController.GameControllerQuestionObserver observer;
 
     static boolean on_finish = false;
-    CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
+    CountDownTimer countDownTimer = new CountDownTimer(60000, 1000) {
 
         public void onTick(long millisUntilFinished) {
             TextView contador = findViewById(R.id.contador);
