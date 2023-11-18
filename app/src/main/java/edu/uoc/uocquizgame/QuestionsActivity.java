@@ -15,7 +15,10 @@ import edu.uoc.uocquizgame.placeholder.PlaceholderContent;
 
 public class QuestionsActivity extends AppCompatActivity {
     GameController controller=GameController.getInstance();
-    CountDownTimer contador = new CountDownTimer(25000, 1000) {
+    GameController.GameControllerQuestionObserver observer;
+
+    boolean on_finish = false;
+    CountDownTimer contador = new CountDownTimer(60000, 1000) {
 
         public void onTick(long millisUntilFinished) {
             TextView contador = findViewById(R.id.contador);
@@ -23,9 +26,9 @@ public class QuestionsActivity extends AppCompatActivity {
         }
 
         public void onFinish() {
+            on_finish = true;
             controller.setCurrentQuestion(QuizContent.ITEMS.size());
             checkUnitPassed();
-            play(R.raw.gong);
         }
     };
     @Override
@@ -36,13 +39,14 @@ public class QuestionsActivity extends AppCompatActivity {
         QuizContent.loadQuestionsFromJSON(this,quizNumber);
         controller.initTest();
         setContentView(R.layout.activity_questions);
-        GameController.GameControllerQuestionObserver observer=new GameController.GameControllerQuestionObserver() {
+        observer=new GameController.GameControllerQuestionObserver() {
             @Override public void onQuestionChanged() {
                 checkUnitPassed();
             }
         };
         controller.addQuestionObserver(observer);
         controller.setCurrentUnit(quizNumber);
+
         TextView unitTest = findViewById(R.id.unitTest);
         unitTest.setText(PlaceholderContent.UNITS.get(controller.getCurrentUnit()).description);
         ImageView imageUnit = findViewById(R.id.imageUnit);
@@ -75,13 +79,17 @@ public class QuestionsActivity extends AppCompatActivity {
                 // all questions are not  right
                 controller.changeUnitState(GameController.UnitType.FAILED, controller.getCurrentUnit());
                 TextView progress = findViewById(R.id.progress);
-                progress.setText("END OF TEST: Total Right Answers: "+controller.getCorrectAnswersInCurrentTest()+" - TEST FAILED!");
+                progress.setText("END OF TEST: Total Right Answers: " + controller.getCorrectAnswersInCurrentTest() + " - TEST FAILED!");
                 contador.cancel();
                 TextView contador = findViewById(R.id.contador);
                 contador.setText("FINISHED! TEST FAILED!");
-                play(R.raw.fail);
+                if (!on_finish) {
+                    play(R.raw.fail);
+                }
+                else play(R.raw.gong);
             }
         }
+
         else {
             // Current unit test is not over. change the Question
             TextView question = findViewById(R.id.question);
@@ -89,8 +97,6 @@ public class QuestionsActivity extends AppCompatActivity {
             TextView progress = findViewById(R.id.progress);
             progress.setText("Question "+(controller.getCurrentQuestion()+1)+"/"+QuizContent.ITEMS.size()+" - Right Answers: "+controller.getCorrectAnswersInCurrentTest());
 
-            // Set new title question in  txtQuestion.setText
-            // Set progress in txtProgress
         }
     }
 }
